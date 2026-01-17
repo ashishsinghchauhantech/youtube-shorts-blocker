@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Shorts Blocker",
+  "version": "1.3",
+  "description": "Automatically block YouTube Shorts",
+  "icons": {
+    "16": "ad-block.png",
+    "48": "ad-block.png",
+    "128": "ad-block.png"
+  },
+  "host_permissions": [
+    "https://www.youtube.com/*"
+  ],
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["blocker.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
